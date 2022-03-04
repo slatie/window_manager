@@ -77,7 +77,7 @@ public class WindowManager: NSObject, NSWindowDelegate {
         mainWindow.titleVisibility = .hidden
         mainWindow.isOpaque = false
         mainWindow.hasShadow = true
-        mainWindow.backgroundColor = NSColor.defaultBackgroundColor
+        mainWindow.backgroundColor = NSColor.windowBackgroundColor
         let titleBarView: NSView = (mainWindow.standardWindowButton(.closeButton)?.superview)!.superview!
         titleBarView.isHidden = false
     }
