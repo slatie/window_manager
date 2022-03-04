@@ -87,6 +87,9 @@ class WindowManager {
   Future<void> setAsFrameless() async {
     await _channel.invokeMethod('setAsFrameless');
   }
+  Future<void> setAsFrameful() async {
+    await _channel.invokeMethod('setAsFrameful');
+  }
 
   Future<void> waitUntilReadyToShow() async {
     await _channel.invokeMethod('waitUntilReadyToShow');

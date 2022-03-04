@@ -56,6 +56,10 @@ public class WindowManagerPlugin: NSObject, FlutterPlugin {
             windowManager.setAsFrameless()
             result(true)
             break
+        case "setAsFrameful":
+            windowManager.setAsFrameful()
+            result(true)
+            break
         case "destroy":
             windowManager.destroy()
             result(true)

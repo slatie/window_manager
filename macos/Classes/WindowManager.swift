@@ -72,6 +72,15 @@ public class WindowManager: NSObject, NSWindowDelegate {
             titleBarView.isHidden = true
         }
     }
+    public func setAsFrameful() {
+        mainWindow.styleMask.remove(.fullSizeContentView)
+        mainWindow.titleVisibility = .hidden
+        mainWindow.isOpaque = false
+        mainWindow.hasShadow = true
+        mainWindow.backgroundColor = NSColor.defaultBackgroundColor
+        let titleBarView: NSView = (mainWindow.standardWindowButton(.closeButton)?.superview)!.superview!
+        titleBarView.isHidden = false
+    }
 
     public func destroy() {
         NSApp.terminate(nil)
