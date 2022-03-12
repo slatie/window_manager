@@ -16,6 +16,7 @@ void main() async {
     // if (!Platform.isLinux) {
     //   await windowManager.setTitleBarStyle('hidden');
     // }
+    print('hi');
     await windowManager.setSize(Size(800, 600));
     await windowManager.center();
     await windowManager.show();
